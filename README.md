@@ -3,6 +3,8 @@ Dentro de este repositorio vamos a encontrar ejercicios referidos a la catedra n
 
 ## Este es el repositorio de Luciano Sarli
 
+assets/images/luciano.md
+
 ### Tabla de contenidos
 1. [Patrones](#patrones)
 2. [Diversas Tecnologías](#diversas-tecnologías)
