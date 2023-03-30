@@ -3,10 +3,10 @@ Dentro de este repositorio vamos a encontrar ejercicios referidos a la catedra n
 
 ## Este es el repositorio de Luciano Sarli
 
-### Table of Contents
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
+### Tabla de contenidos
+1. [Patrones](#patrones)
+2. [Diversas Tecnologías](#diversas-tecnologías)
+3. [Instalación de Dependencias](#instalación-de-dependencias)
+4. [Collabor](#collaboration)
 5. [FAQs](#faqs)
 
