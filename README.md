@@ -4,8 +4,8 @@ Dentro de este repositorio vamos a encontrar ejercicios referidos a la catedra n
 ## Este es el repositorio de Luciano Sarli
 
 > About Me
-
-*Concepción del Uruguay
+* Entre Ríos
+* Concepción del Uruguay
 
 > About University
 * Lic. en Sistemas de Información
