@@ -3,7 +3,7 @@ Dentro de este repositorio vamos a encontrar ejercicios referidos a la catedra n
 
 ## Este es el repositorio de Luciano Sarli
 
-![hola](assets/images/luciano.md)
+![](assets/images/luciano.md)
 
 ### Tabla de contenidos
 1. [Patrones](#patrones)
