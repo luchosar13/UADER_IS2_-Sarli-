@@ -12,12 +12,14 @@ def collatz(n):
         count += 1
     return count
 
-#Listas
+#Lista para los valores numericos que se van iterando
 n_values = []
+#Lista en la que se asignan la cantidad de iteraciones 
+#que tiene un valor hasta llegar al numero 1
 counts = []
 
-#Se le suma al 10000 un +1 porque la función -rango- no toma la ultima posicion
-for n in range(1, 100):
+#Se le suma al 100 un +1 porque la función -rango- no toma la ultima posicion
+for n in range(1, 100+1):
     n_values.append(n)
     counts.append(collatz(n))
 
