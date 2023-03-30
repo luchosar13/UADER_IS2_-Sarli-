@@ -6,26 +6,28 @@
 #* Creative commons                                                        *
 #*-------------------------------------------------------------------------*
 import sys
-def factorial(num): 
-    if num < 0: 
+
+def factorial(num):
+    if num < 0:
         print("Factorial de un número negativo no existe")
-
-    elif num == 0: 
+    elif num == 0:
         return 1
-        
-    else: 
+    else:
         fact = 1
-        while(num > 1): 
-            fact *= num 
+        while(num > 1):
+            fact *= num
             num -= 1
-        return fact 
+        return fact
 
-if (len(sys.argv)) == 2:
-    num = (int(sys.argv[1]))
+if len(sys.argv) == 1:
+    rango = input("Ingrese un rango de números separado por un guión (-) para calcular sus factoriales: ")
 else:
-    if (len(sys.argv)) == 1:
-        num = (int(input("Debe ingresar un numero para poder resolver el factorial: ")))
+    rango = sys.argv[1]
 
-print("El factorial de ", num, " es: ", factorial(num))
+desde, hasta = map(int, rango.split("-"))
+print("Calculando factoriales para el rango:", desde, "-", hasta)
+
+for num in range(desde, hasta+1):
+    print("El Factorial del numero ", num, " es: ", factorial(num))
 
 
