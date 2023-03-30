@@ -5,7 +5,6 @@ Dentro de este repositorio vamos a encontrar ejercicios referidos a la catedra n
 
 > About Me
 *Concepción del Uruguay
-*Entre Ríos
 
 > About University
 * Lic. en Sistemas de Información
