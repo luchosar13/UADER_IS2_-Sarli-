@@ -3,6 +3,8 @@ Dentro de este repositorio vamos a encontrar ejercicios referidos a la catedra n
 
 ## Este es el repositorio de Luciano Sarli
 
+[Linkdin](https://www.linkedin.com/in/lucianosarli/)
+
 ![Foto de Luciano Sarli](https://user-images.githubusercontent.com/101670221/228784313-66b29256-ef86-41e8-8752-e7d69d164053.png)
 
 ### Tabla de contenidos
