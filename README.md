@@ -7,6 +7,6 @@ Dentro de este repositorio vamos a encontrar ejercicios referidos a la catedra n
 1. [Patrones](#patrones)
 2. [Diversas Tecnologías](#diversas-tecnologías)
 3. [Instalación de Dependencias](#instalación-de-dependencias)
-4. [Collabor](#collaboration)
-5. [FAQs](#faqs)
+4. [Git and GitHub](#git-and-github)
+5. [Procesos](#procesos)
 
