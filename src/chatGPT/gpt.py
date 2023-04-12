@@ -3,9 +3,9 @@ import openai
 
 # Se define la clave de la API de OpenAI
 
-openai.api_key = "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"
+openai.api_key = "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"
 
-# [aquí va la inicialización de las variables y otros parámetros]
+# [Esta es la inicialización de las variables y otros parámetros]
 
 TOP_P=1
 FREQ_PENALTY=0
@@ -15,7 +15,7 @@ MAX_TOKENS=1024
 TEMPERATURE=0.75
 NMAX=1
 MODEL_ENGINE = "text-davinci-003"
-PROMPT="text"
+PROMPT=input("You: ")
 
 # [otra lógica necesaria – el texto del prompt debe colocarse en userText]
 
@@ -33,6 +33,12 @@ completion = openai.Completion.create(
     stop=STOP
 )
 
-print(completion.choices[0].text)
+# Se analiza si el usuario ingreso una consulta
+
+if (len(PROMPT)) > 0:
+    print("chatGPT:", completion.choices[0].text)
+else:
+    print("chatGPT: No se ha ingresado una consulta.")
+
 
 
