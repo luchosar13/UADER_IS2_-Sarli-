@@ -21,15 +21,20 @@ contestacion = True
 # Lista para almacenar todas las consultas realizadas por el usuario
 consulta_buffer = []
 
-#
+# Revision de existencia de argumento
 if ((len(sys.argv)) > 0):
+    # Revision de si el argumento es el deseado para luego
+    # comenzar con el bucle
     if "--convers" in sys.argv:
         contestacion
     else:
+        # Caso de que el argumento no sea --convers
         print('No ha ingresado el parametro correcto')
         print("Gracias por usar la API.")
         contestacion = False
 else:
+    # Caso de que el argumento no tenga ingresado ningun valor
+    # El bucle no comienza
     contestacion = False
     print('No se ha activado el modo conversacion.')
     print("Gracias por usar la API.")
@@ -67,19 +72,21 @@ while contestacion:
     except:
         print("Error al tratar la consulta del usuario.")
 
-    # Se analiza si el usuario ingreso una consulta
+    # Si el usuario ingresa exit termine la llamada a la API
+    # mediante el bucle iterativo
 
     if PROMPT == "exit":
             print("Gracias por usar la API.")
             break
 
+    # Bloque referido al analisis del prompt del usuario
     try:
+        # Si la longitud de la cadena es mayor a 0 se hace la llamada a la API
         if (len(PROMPT)) > 0:
+            # Se printea la respuesta de la API
             print("chatGPT:", completion.choices[0].text)
         else:
             print("chatGPT: No se ha ingresado una consulta.")
+    # Except por si ocurre un error de atributo
     except AttributeError:
-        print("chatGPT: Error al acceder al atributo 'choices' del objeto 'completion'.")
-
-    if PROMPT == "exit":
-        contestacion = False
+        print("chatGPT: Error de atributos.")
