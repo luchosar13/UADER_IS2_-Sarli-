@@ -22,35 +22,28 @@ contestacion = True
 consulta_buffer = []
 
 # Revision de existencia de argumento
-if ((len(sys.argv)) > 0):
-    # Revision de si el argumento es el deseado para luego
-    # comenzar con el bucle
-    if "--convers" in sys.argv:
-        contestacion
-    else:
-        # Caso de que el argumento no sea --convers
-        print('No ha ingresado el parametro correcto')
-        print("Gracias por usar la API.")
-        contestacion = False
+#Revision de que el argumento sea --convers
+if ((len(sys.argv)) > 0) and ("--convers" in sys.argv[1]):
+    # Comienza el bucle
+    contestacion
 else:
-    # Caso de que el argumento no tenga ingresado ningun valor
-    # El bucle no comienza
-    contestacion = False
-    print('No se ha activado el modo conversacion.')
+    # Caso de que el argumento no sea --convers
+    print('No ha ingresado el parametro correcto')
     print("Gracias por usar la API.")
+    contestacion = False
 
 # comienzo del bucle iterativo
 while contestacion:
     try:
         PROMPT = input("You: ")
-    except:
+    except AttributeError:
         print("Error al aceptar la consulta del usuario.")
 
     # Se trata la consulta del usuario y se agrega al buffer
     try:
         if PROMPT != "":
             consulta_buffer.append(PROMPT)
-    except:
+    except ValueError:
         print("Error al almacenar la consulta en el buffer.")
 
     # una cadena de texto con todas las consultas almacenadas en el buffer
@@ -69,7 +62,7 @@ while contestacion:
             temperature=TEMPERATURE,
             stop=STOP
         )
-    except:
+    except ConnectionError:
         print("Error al tratar la consulta del usuario.")
 
     # Si el usuario ingresa exit termine la llamada a la API
