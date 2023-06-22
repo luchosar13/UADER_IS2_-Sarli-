@@ -48,3 +48,46 @@ class Singleton:
 # Uso del Singleton
 SINGLETON = Singleton.get_instance()
 SINGLETON.run()
+
+print
+
+
+print'-----------------------------------------------------------'
+
+print
+
+class cuentas_banco:
+    """Clase que representa una cuenta bancaria."""
+
+    def __init__(self, token, balance):
+        self.token = token
+        self.balance = balance
+        self.prox_cuenta = None
+
+    def set_prox_cuenta(self, prox_cuenta):
+        """Establece la siguiente cuenta en la cadena de responsabilidad."""
+        self.prox_cuenta = prox_cuenta
+
+    def procesar_pago(self, monto):
+        """Procesa un pago en la cuenta actual o pasa la responsabilidad a la siguiente cuenta."""
+        if self.balance >= monto:
+            self.balance -= monto
+            print("Pago realizado en la cuenta {}: {}".format(self.token, monto))
+        elif self.prox_cuenta:
+            self.prox_cuenta.procesar_pago(monto)
+        else:
+            print("Saldo insuficiente en todas las cuentas.")
+
+
+# Crear las cuentas bancarias
+account1 = cuentas_banco("token1", 1000)
+account2 = cuentas_banco("token2", 2000)
+
+# Establecer la cadena de responsabilidad
+account1.set_prox_cuenta(account2)
+
+# Procesar pagos
+account1.procesar_pago(500)
+account1.procesar_pago(1500)
+account1.procesar_pago(1000)
+
